@@ -1,7 +1,7 @@
 /*
  *	Assignment 1
  *	CPS590 - Intro to Operating Systems
- *	Written By:		Sam Dindyal
+ *	Written By:	Sam Dindyal
  *	Description: 	Multithreaded simulation of a grid based on "Conway's Game of Life" using the "clone" call	
  */
 
