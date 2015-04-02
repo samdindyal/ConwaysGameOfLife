@@ -172,7 +172,7 @@ void *run(void *arg)
 			//Decrement the votes on the "Mak" at "index"
 			maks->votes[index]--;
 
-			//If the votes on a "Mak" have reached -7, or less
+			//If the votes on a "Mak" have reached -5, or less
 			if (maks->votes[index] <= -5)
 				//Remove the "Mak" from "maks"
 				remove_mak(maks, index);	
