@@ -21,7 +21,7 @@
 
 //Prototypes for all methods
 int mod(int, int);
-int neighbour_count(int, int);
+int neighbor_count(int, int);
 void print_grid(int**);
 void advance_multithread();
 void swap_grids();
@@ -291,8 +291,8 @@ void print_grid(int **grid)
 	putchar('\n');
 }
 
-//Count the alive neighbours of a cell  in "grid1" given its coordinates
-int neighbour_count(int x, int y)
+//Count the alive neighbors of a cell  in "grid1" given its coordinates
+int neighbor_count(int x, int y)
 {
 	//Return sum of surrounding cell values
 	return 	grid1[mod(x-1, size)][mod(y-1, size)]
@@ -308,27 +308,27 @@ int neighbour_count(int x, int y)
 void process_next_generation(int x, int y)
 {
 
-	int counter = neighbour_count(x, y); //The surrounding alive cells of the current cell
+	int counter = neighbor_count(x, y); //The surrounding alive cells of the current cell
 
 	//If the current cell is alive
 	if(grid1[x][y] == ALIVE)
 	{	
-		//If the current cell has less than two neighbouring cell which are alive
+		//If the current cell has less than two neighboring cell which are alive
 		if (counter < 2)
 			//The current cell dies in the next generation
 			grid2[x][y] = DEAD;
 		
-		//If the current cell has two or three neighbouring cells which are alive
+		//If the current cell has two or three neighboring cells which are alive
 		else if (counter == 2 || counter == 3)
 			//The current cell lives in the next generation
 			grid2[x][y] = ALIVE;
 
-		//If the current cell has more than three neighbouring cells which are alive
+		//If the current cell has more than three neighboring cells which are alive
 		else if (counter > 3)
 			//The current cell dies in the next generation
 			grid2[x][y] = DEAD;
 	}
-	//If the current cell is dead and has exactly three neighbouring cells which are alive
+	//If the current cell is dead and has exactly three neighboring cells which are alive
 	else if (counter == 3)
 	//The current cell is reborn in the next generation
 		grid2[x][y] = ALIVE;
