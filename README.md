@@ -1,4 +1,4 @@
-###Conway's Game of Life (Clone Call Implementation)
+### Conway's Game of Life (Clone Call Implementation)
 
 This is an implementation of Conway's Game of Life in C, using Linux's "clone" call, that I created for my Intro to Operating Systems course for school. It takes two command line arguments, the first one being the directory of the input file and the second being the amount of threads to use. The syntax for running it is as follows:
 
